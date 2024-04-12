@@ -8,12 +8,13 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 const helper = require('../core/helper');
 const moment = require('moment-timezone');
-
+ 
 const createadmin = (req, res) => {
   const error = validationResult(req);
   const { UserName, Password, Email, PhoneNumber, ProfilePhoto } = req.body;
 
   let sqlquery = ""
+  console.log("GIT");
   let promise = helper.paramValidate(
     { code: 4005, val: !req.body.UserName },
     { code: 4003, val: !req.body.PhoneNumber },

@@ -44,6 +44,7 @@ const getbook = (req, res) => {
     .then((result) => {
       result.recordset.forEach((record) => {
         record.CreationTimeIST = moment(record.CreationTime).tz('Asia/Kolkata').format('lll');
+      
       });
       res.json(result.recordset);
     })

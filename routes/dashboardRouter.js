@@ -12,8 +12,7 @@ router.get('/orderprice', verifyToken, getorderprice);
 
 router.get('/booksdata', verifyToken, getbookdata);
 
-router.get('/chartdata', verifyToken, getdataforchart);
-
+router.post('/chartdata', verifyToken, getdataforchart);
 
 
 module.exports = router;
